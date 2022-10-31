@@ -1,0 +1,23 @@
+{
+  "name": "readme.md-generator",
+  "version": "1.0.0",
+  "description": "This application provides a README.md generator using Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mparker96/README.md-Generator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mparker96/README.md-Generator/issues"
+  },
+  "homepage": "https://github.com/mparker96/README.md-Generator#readme",
+  "dependencies": {
+    "inquirer": "^9.1.4"
+  }
+}
