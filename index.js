@@ -1,8 +1,8 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 
-const generateREADME = ({ title, description, TOC, install, usage, license, contribution, test, questions
-})
+const generateREADME = ({title, description, TOC, install, usage, license, contribution, test, github, email
+}) =>
   ` 
 # ${title}
 
@@ -53,7 +53,7 @@ inquirer
     },
     {
       type: "input",
-      message: "how is your README.md organized (Table of Contents)",
+      message: "how is your README.md organized (Table of Contents)?",
       name: "TOC",
     },
     {
@@ -73,7 +73,7 @@ inquirer
     },
     {
       type: "input",
-      message: "Who contributed on this project",
+      message: "Who contributed on this project?",
       name: "contribution",
     },
     {
@@ -92,8 +92,8 @@ inquirer
       name: "email",
     },
   ])
-  .then((answers) => {
-    const readmeContent = generateREADME(answers);
+  .then((responses) => {
+    const readmeContent = generateREADME(responses);
 
     fs.writeFile("README.md", readmeContent, (err) =>
       err ? console.log(err) : console.log("README.md Generated")
